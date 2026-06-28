@@ -1,0 +1,222 @@
+Website editing guide for AI
+
+Purpose
+
+This project is an animated Next.js website template. It was built so future content changes are easy. Most edits should happen in one file.
+
+Main file to edit
+
+data/siteContent.ts
+
+Use this file for content changes such as:
+
+- Brand name
+- Logo letter
+- Tagline
+- Navigation labels
+- Button text
+- Hero heading and paragraph
+- Trusted brand names
+- Service cards
+- Builder section text
+- Project cards
+- Testimonials
+- Statistics
+- Technology labels
+- Comparison table
+- Pricing plans
+- Founder text
+- FAQ questions and answers
+- Footer columns and links
+
+Exact location map (open data/siteContent.ts and find these keys)
+
+- Brand name and B logo letter -> brand.name and brand.logoLetter
+  (The "B" logo is drawn from brand.logoLetter. Change the letter here, do not edit components/Logo.tsx.)
+- Tagline -> brand.tagline
+- Navigation menu links -> nav[] (each item has label + href)
+- Button text -> cta.primary, cta.secondary, cta.chat
+- Button target / contact anchor -> cta.href (defaults to "#contact", the footer section id)
+- Hero heading / paragraph / big word -> hero.title, hero.description, hero.giantWord
+- Logo strip names -> trustedBy[]
+- Services -> services.title and services.cards[] (title, description, theme)
+- Pricing -> pricing.plans[] (name, badge, title, subtitle, price, featured, features[])
+- Testimonials -> testimonials.items[] (company, quote, name, role)
+- Stats -> scale.stats[]
+- Comparison table -> comparison.rows[] and comparison.benefits[]
+- Founder text -> founder.name, founder.text, founder.highlights[]
+- FAQ -> faq.items[] (question, answer)
+- Footer headline and link columns -> footer.headline, footer.columns[]
+
+Contact details
+
+This template uses anchor links for contact (the buttons jump to the footer "#contact"
+section). To wire real contact details:
+
+- To change which on-page section the buttons jump to: edit cta.href in data/siteContent.ts.
+- To make a button open email or phone: set cta.href to "mailto:you@example.com" or "tel:+10000000000".
+- To add a phone, email, or address line that shows in the footer: add the fields under a
+  new "contact" object in data/siteContent.ts, then render them once in the Footer section
+  of app/page.tsx (this is the only case where touching page.tsx is expected for contact info).
+- Footer link labels (Contact Us, Support, Live Chat, etc.) live in footer.columns[].
+
+Files to avoid for content-only edits
+
+Do not edit these files for simple text changes:
+
+app/page.tsx
+app/globals.css
+components/
+
+Those files control the layout, animations, reusable components, and visual style.
+
+Decision rule for AI
+
+Before editing, decide which type of request it is.
+
+Content-only request:
+Edit only data/siteContent.ts.
+
+Examples:
+Change this to a dental clinic.
+Change the prices.
+Replace services.
+Change FAQ.
+Change testimonials.
+Change contact wording.
+Change the brand name.
+
+Design or layout request:
+Edit app/page.tsx, app/globals.css, or components only when the user asks for layout, new sections, colors, spacing, animation changes, or structural changes.
+
+Object shape rule
+
+Keep the same object shape in data/siteContent.ts unless you also update the page components.
+
+Good:
+Change title, description, price, label, answer, and array items.
+
+Risky:
+Rename keys like hero.title, pricing.plans, faq.items, or services.cards without updating app/page.tsx.
+
+Animation rule
+
+Keep the animation system unless the user asks to change it.
+
+Do not remove:
+
+- Reveal components
+- Marquee components
+- CSS keyframes
+- Hover classes
+- Section class names
+- Existing card class names
+
+Image rule
+
+Put new images inside the public folder.
+
+Use paths like:
+
+/assets/image-name.jpg
+
+If a section does not already support images, add the image field in data/siteContent.ts and then update the matching component in app/page.tsx.
+
+Writing style rule
+
+Use natural, direct wording. Avoid inflated agency language. Keep sentences clear and specific.
+
+Avoid phrases like:
+
+- game-changing
+- cutting-edge
+- vibrant ecosystem
+- unlock your potential
+- seamless experience
+- tailored solutions
+- trusted partner
+- the future of
+
+Prefer specific wording:
+
+Instead of:
+We create cutting-edge digital experiences that unlock growth.
+
+Use:
+We design fast websites that explain your offer clearly and help visitors contact you.
+
+Safe prompt to reuse
+
+Use this prompt when asking an AI to change the website:
+
+Change this website for [business name/type]. Edit only data/siteContent.ts unless a layout change is required. Keep the current design, animations, section order, and component structure. Replace the placeholder content with realistic text for the business. Keep the same object keys. Do not remove sections unless I ask. Use clear, natural wording without salesy or AI-sounding phrases.
+
+Prompt for a full new business version
+
+Rewrite data/siteContent.ts for this business:
+
+Business name:
+Business type:
+Location:
+Target customers:
+Main services:
+Pricing style:
+Contact method:
+Tone:
+Sections to keep:
+Sections to remove:
+Extra notes:
+
+Keep the object shape unchanged. Keep the animations and layout unchanged.
+
+Prompt for small edits
+
+Edit only data/siteContent.ts. Make these changes:
+
+1. Change brand name to:
+2. Change hero title to:
+3. Change services to:
+4. Change pricing to:
+5. Change FAQ to:
+
+Do not change layout or CSS.
+
+Prompt for design edits
+
+Make this design change:
+
+[describe change]
+
+Before editing, list which files need to change. Keep the content file structure intact. Preserve existing animations unless the change requires a small adjustment.
+
+Developer notes
+
+Run the site locally with:
+
+npm install
+npm run dev
+
+Build check:
+
+npm run build
+
+Common files
+
+app/page.tsx: section structure and JSX
+app/globals.css: full styling and animations
+components/Reveal.tsx: scroll reveal animation
+components/Marquee.tsx: moving logo and testimonial rows
+components/FaqAccordion.tsx: FAQ open and close behavior
+components/Logo.tsx: B logo component
+data/siteContent.ts: main editable website content
+
+GitHub browser upload
+
+1. Create a new GitHub repository.
+2. Click "Add file".
+3. Click "Upload files".
+4. Drag all project files and folders into GitHub.
+5. Commit the files.
+6. Connect the repository to Vercel to publish the website.
+
+Do not upload only the zip file to the repository. Upload the extracted project files.
