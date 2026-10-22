@@ -5,7 +5,7 @@ export const siteContent = {
   brand: {
     name: "B Studio",
     logoLetter: "B",
-    tagline: "Design systems, sites, and digital growth without the agency drag."
+    tagline: "An agency website design study with illustrative content."
   },
 
   nav: [
@@ -16,22 +16,22 @@ export const siteContent = {
   ],
 
   cta: {
-    primary: "Start a project",
+    primary: "View project source",
     secondary: "View pricing",
-    chat: "Chat with us",
-    href: "#contact"
+    chat: "About this demo",
+    href: "https://github.com/BenoshAntonyBenoy/b-agency-next-template"
   },
 
   hero: {
-    eyebrow: "B Studio // New launches every week",
-    title: "The best design and development partner for ambitious brands.",
+    eyebrow: "B Studio // Agency design study",
+    title: "An agency website concept for design and development.",
     description:
-      "We design and build conversion-focused websites, dashboards, landing pages, and product experiences that help your business grow.",
+      "Explore an agency website concept with sample services, project mockups and pricing. This is a portfolio demonstration; bookings and paid services are not offered here.",
     giantWord: "B Studio"
   },
 
   trustedBy: [
-    "CURSOR", "Metricbooks", "Sapient", "Helium", "Kearney", "Spot", "Avant Page", "Moonbeam", "Appsecure", "Webstone", "Joyhealth", "Content Brew"
+    "Sample Brand A", "Sample Brand B", "Sample Brand C", "Sample Brand D", "Sample Brand E"
   ],
 
   services: {
@@ -67,14 +67,14 @@ export const siteContent = {
   },
 
   builder: {
-    badge: "New Launch",
-    title: "B Builder is now Live",
+    badge: "UI concept",
+    title: "B Builder concept preview",
     prompt: "Generate a landing page for a healthcare B2B SaaS",
     poweredBy: ["Claude", "Meta", "OpenAI", "Perplexity", "Replicate"]
   },
 
   projects: {
-    title: "Projects",
+    title: "Project mockups",
     items: [
       {
         title: "AI search landing page",
@@ -110,7 +110,7 @@ export const siteContent = {
   },
 
   testimonials: {
-    title: "See insights straight from our users",
+    title: "Fictional sample testimonials",
     items: [
       {
         company: "Helium",
@@ -144,13 +144,13 @@ export const siteContent = {
   },
 
   scale: {
-    title: "Scaling Successful Companies",
+    title: "Illustrative business metrics",
     intro:
-      "We combine senior design thinking, clean frontend engineering, and launch support to move faster than traditional service providers.",
+      "These figures demonstrate the layout. They do not represent completed client projects, customer ratings or business results.",
     stats: [
-      { value: "80+", label: "Projects shipped" },
-      { value: "12", label: "Industries served" },
-      { value: "4.9/5", label: "Average rating" }
+      { value: "80+", label: "Example project count" },
+      { value: "12", label: "Example industry count" },
+      { value: "4.9/5", label: "Example rating" }
     ],
     technologies: ["AWS", "Analytics", "AI", "Realtime", "React", "Next.js"]
   },
@@ -171,8 +171,8 @@ export const siteContent = {
   },
 
   pricing: {
-    title: "Extensive Pricing Plans",
-    note: "Doubts? Reach out to us anytime.",
+    title: "Sample Pricing Plans",
+    note: "Illustrative prices only. No purchases, subscriptions or bookings are available.",
     plans: [
       {
         name: "Components",
@@ -226,8 +226,8 @@ export const siteContent = {
   },
 
   founder: {
-    title: "The Founder's Desk",
-    name: "Founder Name",
+    title: "About this design study",
+    name: "a fictional founder",
     text:
       "I help businesses turn vague website ideas into polished, conversion-focused digital experiences. This template is built so your future edits stay easy: change the content file, keep the layout intact, and relaunch fast.",
     highlights: ["Full-stack mindset", "Design-led execution", "Reusable website systems"]
@@ -265,12 +265,10 @@ export const siteContent = {
   },
 
   footer: {
-    headline: "Make Your Website a Sales Machine",
+    headline: "Explore the agency website concept",
     columns: [
-      { heading: "Home", links: ["Overview", "Features", "Pricing"] },
-      { heading: "About", links: ["Our Story", "Team", "Careers"] },
-      { heading: "Contact", links: ["Contact Us", "Support", "Live Chat"] },
-      { heading: "Legal", links: ["Privacy Policy", "Terms of Service", "Cookie Policy"] }
+      { heading: "Explore", links: ["Work", "Services", "Pricing", "FAQ"] },
+      { heading: "Project", links: ["Source"] }
     ]
   }
 };

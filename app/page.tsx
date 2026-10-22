@@ -5,7 +5,7 @@ import Marquee from "@/components/Marquee";
 import Reveal from "@/components/Reveal";
 import { siteContent } from "@/data/siteContent";
 
-function IconButton({ children, href = "#contact" }: { children: ReactNode; href?: string }) {
+function IconButton({ children, href = siteContent.cta.href }: { children: ReactNode; href?: string }) {
   return (
     <a href={href} className="cta-button">
       <span className="button-icon">✦</span>
@@ -70,7 +70,7 @@ function Hero() {
 function TrustedBy() {
   return (
     <section className="trusted section-tight">
-      <Reveal className="trusted-label">Trusted by fast-growing teams</Reveal>
+      <Reveal className="trusted-label">Sample brand placeholders</Reveal>
       <Marquee>
         {siteContent.trustedBy.map((name) => (
           <span className="logo-chip" key={name}>
@@ -216,7 +216,7 @@ function Testimonials() {
       <Marquee>
         {siteContent.testimonials.items.map((item) => (
           <article className="testimonial-card" key={`${item.company}-${item.name}`}>
-            <div className="testimonial-company">{item.company}</div>
+            <div className="testimonial-company">Fictional example · {item.company}</div>
             <p>&quot;{item.quote}&quot;</p>
             <div className="person-row">
               <span className="avatar">{item.name.charAt(0)}</span>
@@ -282,9 +282,9 @@ function Comparison() {
           </div>
         ))}
         <div className="comparison-actions comparison-row">
-          <span>Always Free</span>
+          <span>Design concept only</span>
           <IconButton>{siteContent.cta.primary}</IconButton>
-          <button className="disabled-button">Book a Paid Call</button>
+          <button className="disabled-button" disabled>Bookings unavailable</button>
         </div>
       </Reveal>
       <div className="benefit-grid">
@@ -380,14 +380,14 @@ function Footer() {
         <div>
           <Logo compact />
           <p>{siteContent.brand.tagline}</p>
-          <IconButton>{siteContent.cta.primary}</IconButton>
+          <IconButton href={siteContent.cta.href}>{siteContent.cta.primary}</IconButton>
         </div>
         <div className="footer-links">
           {siteContent.footer.columns.map((column) => (
             <div key={column.heading}>
               <h4>{column.heading}</h4>
               {column.links.map((link) => (
-                <a href="#top" key={link}>{link}</a>
+                <a href={link === "Source" ? siteContent.cta.href : `#${link.toLowerCase()}`} key={link}>{link}</a>
               ))}
             </div>
           ))}
@@ -400,6 +400,11 @@ function Footer() {
 export default function Home() {
   return (
     <main>
+      <aside style={{ padding: "16px 24px", background: "#fff4ce", color: "#302700", fontSize: "14px", lineHeight: 1.6 }} aria-label="Demo information">
+        <strong>Portfolio design demo.</strong> Brands, testimonials, project mockups, prices and business metrics are illustrative.
+        No client relationships, live builder product, booking service or paid plans are represented.
+        {" "}<a href={siteContent.cta.href}>View project source</a>.
+      </aside>
       <Hero />
       <TrustedBy />
       <Services />

@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "B Studio - Animated Next.js Template",
-  description: "Editable animated agency template built with Next.js."
+  title: "B Studio — Agency Website Design Study",
+  description: "A portfolio design demonstration with illustrative brands, testimonials, project mockups, pricing and business metrics. No paid services are offered."
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

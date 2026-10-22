@@ -2,6 +2,11 @@
 
 This is an animated, editable Next.js website template based on the uploaded UI video style.
 
+The published page is a portfolio design demo. Brand placeholders, fictional
+testimonials, mockups, prices and business metrics are explicitly illustrative.
+There is no live builder, booking flow or paid service. Replace sample claims
+with verified information before adapting it for an operating business.
+
 ## What is included
 
 - Custom "B" logo in the header and footer
