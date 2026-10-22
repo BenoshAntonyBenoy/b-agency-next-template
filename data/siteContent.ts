@@ -35,7 +35,7 @@ export const siteContent = {
   ],
 
   services: {
-    title: "Replace your Engineering Team",
+    title: "Service concepts",
     cards: [
       {
         title: "Design and Development",
@@ -156,7 +156,7 @@ export const siteContent = {
   },
 
   comparison: {
-    title: "B Studio VS Traditional Service Providers",
+    title: "Example service comparison",
     rows: [
       { label: "Communication", us: "Clear updates", them: "Multiple middlemen" },
       { label: "Deliverables", us: "Production-ready design systems", them: "Static mockups" },

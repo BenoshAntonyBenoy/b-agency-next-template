@@ -158,19 +158,19 @@ function Builder() {
       <Reveal className="builder-head" delay={40}>
         <div className="pill-row center">
           <span className="pill dark-pill">{siteContent.builder.badge}</span>
-          <span className="pill">Production-ready apps in minutes</span>
+          <span className="pill">Non-interactive UI mockup</span>
         </div>
         <h2>{siteContent.builder.title}</h2>
       </Reveal>
       <Reveal delay={140} className="prompt-box">
-        <div className="prompt-top">↯ Unlock more features with Pro</div>
+        <div className="prompt-top">Illustrative builder interface</div>
         <div className="prompt-body">
           <span>{siteContent.builder.prompt}</span>
-          <button aria-label="Generate">↑</button>
+          <button aria-label="Builder preview only — generation unavailable" disabled>↑</button>
         </div>
       </Reveal>
       <Reveal delay={240} className="powered-by">
-        <span>Powered by the best</span>
+        <span>Illustrative provider labels — no integrations</span>
         <div>
           {siteContent.builder.poweredBy.map((item) => (
             <b key={item}>{item}</b>
@@ -240,7 +240,7 @@ function Scale() {
               <span className={`face face-${index}`} key={index}>{index % 3 === 0 ? "●" : ""}</span>
             ))}
           </div>
-          <h3>Get to know our dream team</h3>
+          <h3>Example team panel</h3>
           <IconButton>{siteContent.cta.chat}</IconButton>
         </Reveal>
         <Reveal delay={90} className="scale-copy-card">
@@ -252,7 +252,7 @@ function Scale() {
           </div>
         </Reveal>
         <Reveal delay={180} className="tech-panel">
-          <h3>Technologies we use</h3>
+          <h3>Illustrative technology stack</h3>
           <div className="tech-row">
             {siteContent.scale.technologies.map((tech) => (
               <span key={tech}>{tech}</span>
